@@ -1,0 +1,130 @@
+---
+import "../styles/global.css";
+
+const postModules = import.meta.glob('./blog/*.md', { eager: true });
+const posts = Object.entries(postModules)
+  .map(([path, mod]: [string, any]) => ({
+    slug: path.replace('./blog/', '').replace('.md', ''),
+    ...mod.frontmatter
+  }))
+  .filter(p => p.title)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const tech = [
+  { category: "Backend",      items: ["Node.js", "NestJS", "TypeScript"] },
+  { category: "Architecture", items: ["Microservices", "Hexagonal Architecture", "Clean Architecture"] },
+  { category: "Cloud",        items: ["Google Cloud Platform", "Docker", "Supabase"] },
+  { category: "Data",         items: ["PostgreSQL", "MySQL", "MongoDB", "Firestore", "BigQuery"] },
+  { category: "AI",           items: ["OpenAI", "Gemini"] },
+];
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>arzidev — Backend Engineer</title>
+  <meta name="description" content="Backend Engineer specialized in Node.js, NestJS, TypeScript, and microservices on GCP." />
+  <script is:inline>
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') document.documentElement.classList.remove('dark');
+    else document.documentElement.classList.add('dark');
+  </script>
+</head>
+
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased transition-colors">
+
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur border-b border-zinc-100 dark:border-zinc-800/50">
+  <div class="max-w-2xl mx-auto px-6 h-12 flex justify-between items-center">
+    <span class="text-sm font-mono text-zinc-400 dark:text-zinc-500">arzidev</span>
+    <div class="flex items-center gap-3">
+      <button
+        id="theme-toggle"
+        aria-label="Toggle theme"
+        class="text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors cursor-pointer"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" class="hidden dark:block"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" class="block dark:hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>
+      </button>
+      <a href="https://github.com/arzidev" class="text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
+<main class="max-w-2xl mx-auto px-6 pt-28 pb-24 space-y-16">
+
+  <!-- IDENTITY -->
+  <section>
+    <h1 class="text-3xl font-bold tracking-tight">Javier Arciniegas Ortiz</h1>
+    <p class="mt-1 text-sm font-mono text-zinc-400 dark:text-zinc-500">Backend Engineer · Node.js · NestJS · GCP · AI</p>
+    <p class="mt-3 text-sm text-zinc-500 dark:text-zinc-400">Actualmente Backend Engineer en Cidenet</p>
+    <p class="mt-5 text-zinc-600 dark:text-zinc-400 leading-relaxed text-[0.9375rem] text-justify">
+      Backend Engineer con más de 5 años de experiencia desarrollando plataformas escalables y microservicios con Node.js, NestJS y Google Cloud Platform. Me apasiona la arquitectura de software, los sistemas distribuidos, el código limpio y la integración de inteligencia artificial para construir soluciones robustas y escalables que resuelven problemas reales de negocio.
+    </p>
+    <div class="mt-5 flex flex-wrap gap-2">
+      <a href="https://github.com/arzidev" class="text-xs px-3 py-1.5 border border-zinc-200 dark:border-zinc-800 rounded text-zinc-500 dark:text-zinc-400 hover:border-zinc-400 dark:hover:border-zinc-600 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">GitHub</a>
+      <a href="https://linkedin.com/in/arzidev" class="text-xs px-3 py-1.5 border border-zinc-200 dark:border-zinc-800 rounded text-zinc-500 dark:text-zinc-400 hover:border-zinc-400 dark:hover:border-zinc-600 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">LinkedIn</a>
+      <a href="/cv.pdf" class="text-xs px-3 py-1.5 border border-zinc-200 dark:border-zinc-800 rounded text-zinc-500 dark:text-zinc-400 hover:border-zinc-400 dark:hover:border-zinc-600 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">CV</a>
+      <a href="mailto:hi@arzidev.dev" class="text-xs px-3 py-1.5 border border-zinc-200 dark:border-zinc-800 rounded text-zinc-500 dark:text-zinc-400 hover:border-zinc-400 dark:hover:border-zinc-600 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">Email</a>
+    </div>
+  </section>
+
+  <!-- TECH -->
+  <section>
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-4">Stack</h2>
+    <div class="space-y-3">
+      {tech.map(group => (
+        <div class="flex items-baseline gap-4">
+          <span class="text-xs text-zinc-400 dark:text-zinc-600 w-28 shrink-0">{group.category}</span>
+          <span class="text-sm text-zinc-700 dark:text-zinc-300">{group.items.join(' · ')}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- POSTS -->
+  <section>
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-4">Últimas Publicaciones</h2>
+    {posts.length === 0 ? (
+      <p class="text-sm text-zinc-400 dark:text-zinc-600">Muy pronto.</p>
+    ) : (
+      <ul class="space-y-0">
+        {posts.map(post => (
+          <li>
+            <a
+              href={`/blog/${post.slug}`}
+              class="group block py-4 border-b border-zinc-100 dark:border-zinc-800/60 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
+            >
+              <span class="text-[0.9375rem] text-zinc-800 dark:text-zinc-200 group-hover:text-zinc-500 dark:group-hover:text-zinc-400 transition-colors leading-snug">
+                {post.title}
+              </span>
+              {post.date && (
+                <p class="mt-1 text-xs text-zinc-400 dark:text-zinc-600 font-mono">
+                  {new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: '2-digit' })}
+                </p>
+              )}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+
+</main>
+
+<footer class="max-w-2xl mx-auto px-6 pb-10">
+  <p class="text-xs text-zinc-400 dark:text-zinc-700">© {new Date().getFullYear()} arzidev</p>
+</footer>
+
+</body>
+</html>
