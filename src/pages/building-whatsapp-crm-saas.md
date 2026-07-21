@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../layouts/Layout.astro
 title: "Creando un CRM de WhatsApp SaaS"
 description: "Cómo estoy construyendo una plataforma multi-tenant para gestionar conversaciones de WhatsApp, agentes y automatizaciones desde cero, documentando todo el proceso."
 pubDate: 2026-07-20
