@@ -4,7 +4,8 @@ title: "Cómo configurar llaves SSH en WSL2 para GitLab (Paso a Paso)"
 description: "Guía rápida y paso a paso para generar, configurar y autenticar tus SSH keys desde Windows Subsystem for Linux (WSL) hacia GitLab de forma segura."
 pubDate: 2026-07-21
 date: 2026-07-21
-tags: ["GCP", "Pub/Sub", "Microservices", "NestJS", "TypeScript"]
+slug: "configurar-ssh-wsl-gitlab"
+tags: ["GitLab", "WSL", "SSH", "Linux", "DevOps"]
 ---
 
 ## Cómo configurar llaves SSH en WSL2 para GitLab (Paso a Paso)
