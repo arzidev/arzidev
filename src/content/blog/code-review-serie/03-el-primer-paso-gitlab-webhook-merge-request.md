@@ -1,7 +1,7 @@
 ---
 title: "El primer paso: hacer que GitLab me avise cuando ocurre un Merge Request"
 description: "Antes de utilizar modelos de IA, era necesario resolver un problema de backend básico: integrar Webhooks en FastAPI para capturar eventos de GitLab en tiempo real."
-pubDate: 2026-07-24
+pubDate: 2026-07-17
 tags: ["gitlab", "webhook", "fastapi", "python", "ngrok"]
 categories: ["AI"]
 series: "Ai Code Reviewer"

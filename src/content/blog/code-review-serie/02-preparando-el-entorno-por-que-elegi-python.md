@@ -1,7 +1,7 @@
 ---
 title: "Preparando el entorno: por qué elegí Python para este proyecto"
 description: "Antes de escribir una sola línea del AI Code Reviewer, tomé una decisión clave: salir de Node.js/NestJS y construir el proyecto en Python. Aquí explico mis razones y cómo preparé el entorno."
-pubDate: 2026-07-23
+pubDate: 2026-07-16
 tags: ["python", "fastapi", "backend", "developer-experience"]
 categories: ["AI"]
 series: "Ai Code Reviewer"

@@ -1,7 +1,7 @@
 ---
 title: "El error que me hizo entender cómo funciona realmente GitLab Discussions"
 description: "Todo parecía estar listo para publicar comentarios en un Merge Request... hasta que la API de GitLab respondió con un error 400 que me obligó a entender a fondo la estructura de position y line_code."
-pubDate: 2026-07-28
+pubDate: 2026-07-21
 tags: ["gitlab", "discussions", "api", "python", "fastapi"]
 categories: ["AI"]
 series: "Ai Code Reviewer"

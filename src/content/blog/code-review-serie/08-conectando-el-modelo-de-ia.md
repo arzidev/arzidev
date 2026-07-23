@@ -1,7 +1,7 @@
 ---
 title: "Conectando el modelo de IA: Structured Outputs y resolución automática de discusiones"
 description: "Llegó el momento de darle cerebro a nuestro bot. Usando GPT-4o y Structured Outputs (JSON Schema), logramos que la IA analice el diff, cree nuevas discusiones y cierre las que el dev ya corrigió."
-pubDate: 2026-07-29
+pubDate: 2026-07-22
 tags: ["ai", "openai", "python", "fastapi", "code-review", "gitlab"]
 categories: ["AI"]
 series: "Ai Code Reviewer"

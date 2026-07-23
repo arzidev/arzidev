@@ -1,7 +1,7 @@
 ---
 title: "Entendiendo un Git Diff: el problema que no esperaba encontrar"
 description: "Obtener el diff de un Merge Request fue sencillo. Entender la anatomía de un hunk header (@@ -a,b +c,d @@) para ubicar comentarios fue una historia completamente diferente."
-pubDate: 2026-07-26
+pubDate: 2026-07-19
 tags: ["git", "gitlab", "diff", "python", "backend"]
 categories: ["AI"]
 series: "Ai Code Reviewer"

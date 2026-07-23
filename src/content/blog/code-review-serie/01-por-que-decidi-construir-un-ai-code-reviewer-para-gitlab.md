@@ -1,7 +1,7 @@
 ---
 title: "Por qué decidí construir un AI Code Reviewer para GitLab"
 description: "Inicio de una serie donde documentaré el desarrollo de un AI Code Reviewer para GitLab mientras aprendo Python e Inteligencia Artificial desde la perspectiva de un desarrollador Backend."
-pubDate: 2026-07-21
+pubDate: 2026-07-15
 tags: ["gitlab", "python", "ai", "fastapi", "backend"]
 categories: ["AI"]
 series: "Ai Code Reviewer"

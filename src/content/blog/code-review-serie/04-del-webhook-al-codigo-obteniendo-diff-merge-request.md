@@ -1,7 +1,7 @@
 ---
 title: "Del Webhook al código: obteniendo el diff de un Merge Request"
 description: "Recibir el Webhook era solo el primer paso. Ahora tocaba consultar la API de GitLab para extraer únicamente el código que había cambiado."
-pubDate: 2026-07-25
+pubDate: 2026-07-18
 tags: ["gitlab", "api", "diff", "python", "fastapi"]
 categories: ["AI"]
 series: "Ai Code Reviewer"

@@ -1,7 +1,7 @@
 ---
 title: "Cerrando el ciclo: Orquestando la resolución automática de discusiones en GitLab"
 description: "Ensamble final de nuestro backend. Conectamos la respuesta estructurada de GPT-4o con las llamadas a la API de GitLab para crear nuevas observaciones y cerrar hilos resueltos sin intervención humana."
-pubDate: 2026-08-05
+pubDate: 2026-07-23
 tags: ["python", "fastapi", "gitlab", "ai", "openai", "code-review"]
 categories: ["Backend"]
 series: "Ai Code Reviewer"

@@ -1,7 +1,7 @@
 ---
 title: "El algoritmo que necesitaba para saber dónde comentar el código"
 description: "Entender el formato de un Git Diff fue solo el principio. Ahora tenía que descubrir exactamente en qué línea debía publicar cada comentario."
-pubDate: 2026-07-27
+pubDate: 2026-07-20
 tags: ["git", "gitlab", "diff", "algoritmo", "python"]
 categories: ["AI"]
 series: "Ai Code Reviewer"
