@@ -1,14 +1,10 @@
 ---
-layout: ../../layouts/Layout.astro
 title: "Cómo configurar llaves SSH en WSL2 para GitLab (Paso a Paso)"
 description: "Guía rápida y paso a paso para generar, configurar y autenticar tus SSH keys desde Windows Subsystem for Linux (WSL) hacia GitLab de forma segura."
 pubDate: 2026-07-21
-date: 2026-07-21
-slug: "configurar-ssh-wsl-gitlab"
 tags: ["GitLab", "WSL", "SSH", "Linux", "DevOps"]
+categories: ["DevOps"]
 ---
-
-## Cómo configurar llaves SSH en WSL2 para GitLab (Paso a Paso)
 
 Si desarrollas en Windows utilizando WSL2 (Ubuntu, Debian, etc.), uno de los primeros obstáculos al configurar tu entorno es la autenticación con tu proveedor de Git. Usar HTTPS e ingresar credenciales o tokens en cada git push o git pull resulta incómodo e ineficiente.
 
