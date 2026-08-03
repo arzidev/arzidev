@@ -64,8 +64,6 @@ GitLab AI Reviewer
         Análisis del diff
                │
      GitLab Discussions
-               │
-        Supabase/PostgreSQL
 ```
 
 ---
